@@ -1,0 +1,38 @@
+@import '../../styles/index.scss';
+
+.ion-badge {
+  display: flex;
+  text-align: center;
+
+  span {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    padding: spacing(0) spacing(0.5);
+    border-radius: 50px;
+    min-width: 8px;
+    box-sizing: content-box;
+  }
+}
+
+@mixin theme-badge($bgColor, $fontColor) {
+  background-color: $bgColor;
+  color: $fontColor;
+}
+
+.badge-primary {
+  @include theme-badge($primary-color, $neutral-1);
+}
+
+.badge-secondary {
+  @include theme-badge($secondary-color, $primary-color);
+}
+
+.badge-neutral {
+  @include theme-badge($neutral-4, $neutral-8);
+}
+
+.badge-negative {
+  @include theme-badge($negative-color, $positive-1);
+}
