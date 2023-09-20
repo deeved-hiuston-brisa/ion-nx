@@ -1,7 +1,7 @@
 import { Component, ElementRef, Input } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { iconsPaths } from './svgs/icons';
-import { IconType } from './model';
+import { IconType } from './types';
 
 @Component({
   standalone: true,
