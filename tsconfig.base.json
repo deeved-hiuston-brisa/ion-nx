@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@brisanet/ion": ["ion/src/index.ts"]
+      "@brisanet/ion": ["ion/src/index.ts"],
+      "@brisanet/ion/icon": ["ion/icon/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
