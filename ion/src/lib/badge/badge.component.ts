@@ -25,31 +25,14 @@ export class IonBadgeComponent implements OnChanges, OnInit {
   }
 
   formatValue(): string {
-    if (this.value) {
-      if (isNaN(this.value)) {
-        throw new Error('value is not number!');
-      }
-
-      return this.limitValue(this.value);
+    if (this.value != null && !isNaN(this.value)) {
+      return this.value > 99 ? '99+' : this.value.toString();
     }
 
     if (!this.label) {
-      throw new Error('label not found!');
+      throw new Error('Label not found or value is not number!');
     }
 
     return this.label;
-    // return this.exists(this.value) ? this.limitValue(this.value) : this.label;
-  }
-
-  // private exists(value: number): boolean {
-  //   return value !== null && !isNaN(value);
-  // }
-
-  private limitValue(value: number): string {
-    const maxValue = 99;
-    if (value > maxValue) {
-      return `${maxValue}+`;
-    }
-    return value.toString();
   }
 }

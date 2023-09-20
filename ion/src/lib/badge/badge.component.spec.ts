@@ -43,7 +43,13 @@ describe('BadgeComponent', () => {
     }
   );
 
-  it.each(['primary', 'secondary', 'neutral', 'negative'])(
+  const badgeType: BadgeType[] = [
+    'primary',
+    'secondary',
+    'neutral',
+    'negative',
+  ];
+  it.each(badgeType)(
     'should render 99+ when value is %i (bigger than 100)',
     async (type: BadgeType) => {
       await sut({ type, label: type });
