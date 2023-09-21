@@ -3,6 +3,6 @@
   "dest": "../dist/ion",
   "deleteDestPath": true,
   "lib": {
-    "entryFile": "src/index.ts"
+    "entryFile": "index.ts"
   }
 }
