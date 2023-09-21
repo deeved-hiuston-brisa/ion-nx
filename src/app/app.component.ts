@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { IonBadgeComponent } from '@brisanet/ion';
-import { IonIconComponent } from '@brisanet/ion/icon';
-import { BadgeType } from 'ion/src/lib/core/types';
+import { BadgeType, IonBadgeComponent } from '@brisanet/ion/components/badge';
+import { IonIconComponent } from '@brisanet/ion/components/icon';
 
 @Component({
   standalone: true,

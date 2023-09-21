@@ -40,13 +40,7 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "ion/**/*.ts",
-          "ion/**/*.html",
-          "ion/package.json",
-          "ion/icon/**/*.ts",
-          "ion/icon/**/*.html"
-        ]
+        "lintFilePatterns": ["ion/**/*.ts", "ion/**/*.html", "ion/package.json"]
       }
     }
   }

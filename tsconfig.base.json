@@ -15,9 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@brisanet/ion/*": ["ion/components/*"],
-      "@brisanet/ion/components/*": ["ion/components/*"],
-      "@brisanet/ion/components/icon": ["ion/components/icon/index.ts"]
+      "@brisanet/ion/components/icon": ["ion/components/icon/index.ts"],
+      "@brisanet/ion/components/badge": ["ion/components/badge/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
