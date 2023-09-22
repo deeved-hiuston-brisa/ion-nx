@@ -5,7 +5,7 @@
     "declaration": true,
     "declarationMap": true,
     "inlineSources": true,
-    "types": []
+    "types": ["jest", "node", "@testing-library/jest-dom"]
   },
   "exclude": [
     "src/**/*.spec.ts",
@@ -13,5 +13,5 @@
     "jest.config.ts",
     "src/**/*.test.ts"
   ],
-  "include": ["src/**/*.ts", "test-setup.ts"]
+  "include": ["src/**/*.ts", "test-setup.ts", "**/*.ts"]
 }

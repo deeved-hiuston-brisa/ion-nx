@@ -24,7 +24,13 @@
             "style": "kebab-case"
           }
         ]
-      }
+      },
+      "@nx/enforce-module-boundaries": [
+        "error",
+        {
+          "enforceBuildableLibDependency": true
+        }
+      ]
     },
     {
       "files": ["*.html"],

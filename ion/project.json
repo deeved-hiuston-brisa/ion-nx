@@ -1,7 +1,7 @@
 {
   "name": "ion",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "ion/src",
+  "sourceRoot": "ion",
   "prefix": "ion",
   "tags": [],
   "projectType": "library",
