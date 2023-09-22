@@ -1,16 +1,15 @@
-import { CommonModule } from '@angular/common';
 import {
   RenderResult,
   fireEvent,
   render,
   screen,
 } from '@testing-library/angular';
-import { StatusType } from '../core/types/status';
-import { IonAlertComponent } from './alert.component';
-import { IonIconModule } from '../icon/icon.module';
-import { IonAlertProps } from '../core/types/alert';
+import { StatusType } from '@brisanet/ion/components/core/types';
+import {
+  IonAlertComponent,
+  IonAlertProps,
+} from '@brisanet/ion/components/alert';
 import { AlertCustomBodyComponent } from './mocks/alert-custom-body.component';
-import { IonAlertModule } from './alert.module';
 
 const defaultValue: IonAlertProps = {
   message: 'Mensagem padrão',
@@ -33,7 +32,6 @@ const sut = async (
 ): Promise<HTMLElement> => {
   await render(IonAlertComponent, {
     componentProperties: customProps,
-    imports: [CommonModule, IonIconModule],
   });
   return screen.findByTestId(alertIDs.alert);
 };
@@ -41,10 +39,7 @@ const sut = async (
 const sutAlertWithCustomBody = async (): Promise<
   RenderResult<AlertCustomBodyComponent>
 > => {
-  return await render(AlertCustomBodyComponent, {
-    imports: [CommonModule, IonAlertModule],
-    declarations: [AlertCustomBodyComponent],
-  });
+  return await render(AlertCustomBodyComponent, {});
 };
 
 describe('AlertComponent', () => {
@@ -57,10 +52,13 @@ describe('AlertComponent', () => {
     expect(await screen.findByTestId(alertIDs.iconStatus)).toBeInTheDocument();
   });
 
-  it.each(alertTypes)('Should render %s type', async (type: StatusType) => {
-    const element = await sut({ ...defaultValue, type });
-    expect(element).toHaveClass(type);
-  });
+  it.each(alertTypes as StatusType[])(
+    'Should render %s type',
+    async (type: StatusType) => {
+      const element = await sut({ ...defaultValue, type });
+      expect(element).toHaveClass(type);
+    }
+  );
 
   it('Should render closable alert', async () => {
     const element = await sut({ ...defaultValue, closable: true });
@@ -72,7 +70,7 @@ describe('AlertComponent', () => {
     expect(await screen.findByTestId(alertIDs.iconClose)).toBeInTheDocument();
   });
 
-  it.each(alertTypes)(
+  it.each(alertTypes as StatusType[])(
     'Should render closable %s type',
     async (type: StatusType) => {
       const element = await sut({
