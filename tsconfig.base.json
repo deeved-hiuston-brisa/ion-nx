@@ -13,10 +13,16 @@
     "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
+      "@brisanet/ion": ["ion/components/index.ts"],
+      "@brisanet/ion/components": ["ion/components/index.ts"],
+      "@brisanet/ion/components/alert": ["ion/components/alert/index.ts"],
+      "@brisanet/ion/components/badge": ["ion/components/badge/index.ts"],
       "@brisanet/ion/components/icon": ["ion/components/icon/index.ts"],
-      "@brisanet/ion/components/badge": ["ion/components/badge/index.ts"]
+      "@brisanet/ion/components/core/types": [
+        "ion/components/core/types/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
