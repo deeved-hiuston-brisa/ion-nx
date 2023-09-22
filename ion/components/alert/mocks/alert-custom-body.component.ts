@@ -1,4 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { IonAlertComponent } from '@brisanet/ion/components/alert';
 
 @Component({
   template: `
@@ -15,5 +17,7 @@ import { Component } from '@angular/core';
       </ng-template>
     </div>
   `,
+  standalone: true,
+  imports: [CommonModule, IonAlertComponent],
 })
 export class AlertCustomBodyComponent {}
