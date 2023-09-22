@@ -2,7 +2,7 @@
 export default {
   displayName: 'ion-nx',
   preset: './jest.preset.js',
-  setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
+  setupFilesAfterEnv: ['<rootDir>/test-setup.ts'],
   coverageDirectory: './coverage/ion-nx',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [

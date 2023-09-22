@@ -1,6 +1,6 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BadgeType } from '../core/types';
+import { BadgeType } from './types';
 
 @Component({
   selector: 'ion-badge',

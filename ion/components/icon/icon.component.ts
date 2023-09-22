@@ -1,7 +1,7 @@
 import { Component, ElementRef, Input } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { iconsPaths } from './svgs/icons';
-import { IconType } from '../core/types';
+import { IconType } from './types';
 
 @Component({
   standalone: true,
@@ -10,15 +10,15 @@ import { IconType } from '../core/types';
   styleUrls: ['./icon.component.scss'],
 })
 export class IonIconComponent {
-  @Input({required: true}) type!: IconType;
+  @Input({ required: true }) type!: IconType;
   @Input() size = 24;
   @Input() color = '#282b33';
 
   constructor(private sanitizer: DomSanitizer, private el: ElementRef) {}
 
   getPath(): SafeHtml {
-    if(!iconsPaths[this.type]) {
-      throw new Error('path not found or does not exist!')
+    if (!iconsPaths[this.type]) {
+      throw new Error('path not found or does not exist!');
     }
 
     const paths = iconsPaths[this.type].split('/>');

@@ -1,4 +1,4 @@
-import { iconsPaths } from '../../icon/svgs/icons';
+import { iconsPaths } from './svgs/icons';
 
 export type IconType = keyof typeof iconsPaths;
 

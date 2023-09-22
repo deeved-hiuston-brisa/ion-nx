@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { IonBadgeComponent } from '@brisanet/ion';
-import { BadgeType } from 'ion/src/lib/core/types';
+import { BadgeType, IonBadgeComponent } from '@brisanet/ion/components/badge';
+import { IonIconComponent } from '@brisanet/ion/components/icon';
 
 @Component({
   standalone: true,
-  imports: [IonBadgeComponent],
+  imports: [IonBadgeComponent, IonIconComponent],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],

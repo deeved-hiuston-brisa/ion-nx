@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/angular';
 import { IonBadgeComponent } from './badge.component';
-import { BadgeProps, BadgeType } from '../core/types';
+import { BadgeProps, BadgeType } from './types';
 
 const defaultBadge: BadgeProps = {
   type: 'primary',
