@@ -7,6 +7,7 @@ import {
   IonBreadcrumbComponent,
 } from '@brisanet/ion/components/breadcrumb';
 import { IonCheckboxComponent } from '@brisanet/ion/components/checkbox';
+import { IonDividerComponent } from '@brisanet/ion/components/divider';
 @Component({
   standalone: true,
   imports: [
@@ -15,6 +16,7 @@ import { IonCheckboxComponent } from '@brisanet/ion/components/checkbox';
     IonAlertComponent,
     IonBreadcrumbComponent,
     IonCheckboxComponent,
+    IonDividerComponent,
   ],
   selector: 'app-root',
   templateUrl: './app.component.html',

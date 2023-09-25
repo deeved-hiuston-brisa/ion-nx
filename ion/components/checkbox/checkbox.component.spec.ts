@@ -283,7 +283,6 @@ describe('Checkbox controlled by a parent component', () => {
   it('should disable checkbox when changing disable input on host component', () => {
     checkboxHost.disabled = true;
     fixture.detectChanges();
-    screen.debug();
     expect(screen.getByTestId('ion-checkbox')).toBeDisabled();
   });
 });
