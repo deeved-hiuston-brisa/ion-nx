@@ -27,6 +27,7 @@
       "@brisanet/ion/components/breadcrumb": [
         "ion/components/breadcrumb/index.ts"
       ],
+      "@brisanet/ion/components/divider": ["ion/components/divider/index.ts"],
       "@brisanet/ion/utils": ["ion/utils/index.ts"]
     }
   },
