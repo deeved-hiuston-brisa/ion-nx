@@ -22,7 +22,11 @@
       "@brisanet/ion/components/icon": ["ion/components/icon/index.ts"],
       "@brisanet/ion/components/core/types": [
         "ion/components/core/types/index.ts"
-      ]
+      ],
+      "@brisanet/ion/components/breadcrumb": [
+        "ion/components/breadcrumb/index.ts"
+      ],
+      "@brisanet/ion/utils": ["ion/utils/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
