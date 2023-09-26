@@ -31,6 +31,7 @@
       "@brisanet/ion/components/info-badge": [
         "ion/components/info-badge/index.ts"
       ],
+      "@brisanet/ion/components/input": ["ion/components/input/index.ts"],
       "@brisanet/ion/utils": ["ion/utils/index.ts"]
     }
   },

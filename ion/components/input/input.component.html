@@ -1,0 +1,81 @@
+<div class="input-container">
+  <div
+    data-testid="input-div"
+    class="input"
+    [class.disabled]="disabled"
+    [class.invalid]="invalid"
+    [class.valid]="valid"
+    [class.inputButton]="inputButton"
+    [class.IconButton]="inputIconButton"
+  >
+    <ion-icon
+      data-testid="icon-left"
+      *ngIf="iconDirection === 'left'"
+      [type]="iconInput"
+      [size]="20"
+    ></ion-icon>
+    <input
+      #input
+      [type]="inputType"
+      [attr.placeholder]="placeholder"
+      class="my-input"
+      [disabled]="disabled"
+      [(ngModel)]="value"
+      (ngModelChange)="onChange($event)"
+      data-testid="input-element"
+      [readonly]="readonly"
+      [maxlength]="maxLength"
+    />
+
+    <ion-icon
+      data-testid="icon-right"
+      *ngIf="!isClearButtonVisible() && iconDirection === 'right'"
+      [type]="iconInput"
+      [size]="20"
+    >
+    </ion-icon>
+    <ion-icon
+      data-testid="icon-valid"
+      class="colorValid"
+      *ngIf="valid"
+      type="check-solid"
+      [size]="16"
+    >
+    </ion-icon>
+    <ion-icon
+      data-testid="icon-invalid"
+      class="colorInvalid"
+      *ngIf="invalid"
+      type="close-solid"
+      [size]="16"
+    >
+    </ion-icon>
+    <button
+      *ngIf="isClearButtonVisible()"
+      data-testid="clear-button"
+      class="clearButton"
+      (click)="clearInput(); input.value = ''"
+    >
+      <ion-icon type="close-rounded" [size]="18"></ion-icon>
+    </button>
+  </div>
+
+  <button
+    data-testid="input-button"
+    *ngIf="inputButton"
+    (click)="handleClick()"
+  >
+    {{ button }}
+  </button>
+  <button
+    data-testid="inputIcon-button"
+    *ngIf="inputIconButton"
+    (click)="handleClick()"
+  >
+    <ion-icon type="close-solid"></ion-icon>
+  </button>
+</div>
+
+<div class="errorMsg" *ngIf="invalid && errorMsg">
+  <p>{{ errorMsg }}</p>
+</div>
